@@ -389,12 +389,12 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
 }
 #hero .carousel-item {
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center; */
 }
 #hero .container {
   text-align: center;
@@ -416,7 +416,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 #hero .carousel-inner .carousel-item {
   transition-property: opacity;
-  background-position: center top;
+  background-position: center center;
+  background-color: white;
 }
 #hero .carousel-inner .carousel-item,
 #hero .carousel-inner .active.carousel-item-start,
@@ -458,7 +459,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #hero .carousel-indicators li {
   cursor: pointer;
-  background: #fff;
+  background: rgb(156, 156, 156);
   overflow: hidden;
   border: 0;
   width: 12px;
@@ -493,35 +494,36 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: 50px;
   }
 }
-@media (max-width: 992px) {
-  #hero {
-    max-height: 16vh;
+@media (min-width: 1024px) {
+  #hero .carousel-control-prev, #hero .carousel-control-next {
+    width: 5%;
   }
+}
+@media (max-width: 768px) {
   #hero .carousel-control-prev {
     display: none;
   }
   #hero .carousel-control-next {
     display: none;
   }
-  #hero .container {
-    margin-top: 100px;
+  #hero .carousel-indicators {
+    display: none;
   }
-}
-@media (max-width: 768px) {
+  #hero .carousel-inner .carousel-item {
+    background-position: center top;
+  }
+  #hero {
+    max-height: 44vh;
+  }
   #hero h2 {
     font-size: 28px;
   }
 }
-@media (min-width: 1024px) {
-  #hero .carousel-control-prev, #hero .carousel-control-next {
-    width: 5%;
-  }
-}
-@media (max-height: 500px) {
+@media (max-width: 568px) {
   #hero {
-    height: 24vh;
+    max-height: 28vh;
   }
-}
+} 
 
 /*--------------------------------------------------------------
 # Sections General
