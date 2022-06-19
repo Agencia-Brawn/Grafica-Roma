@@ -984,6 +984,20 @@ section {
   max-width: 300px;
   padding: 0 15px 15px 0;
 }
+.departments .tab-pane a {
+  padding: 12px 20px;
+  background-color: var(--secondary-color);
+  color: #fff;
+  border-radius: 16px;
+  font-weight: bold;
+  transition: all 0.4s;
+}
+.departments .tab-pane a:hover {
+  background-color: #fff;
+  border: 1px solid var(--secondary-color);
+  color: #000;
+  transition: all 0.4s;
+}
 @media (max-width: 768px) {
   .departments .tab-pane img {
     float: none;
