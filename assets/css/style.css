@@ -397,7 +397,7 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
 }
 #hero .carousel-item {
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   /* display: flex;
@@ -520,12 +520,16 @@ h1, h2, h3, h4, h5, h6 {
   #hero .carousel-inner .carousel-item {
     background-position: center top;
   }
+  #hero .carousel-item {
+    background-size: contain;
+  }
   #hero {
     max-height: 44vh;
   }
   #hero h2 {
     font-size: 28px;
   }
+  
 }
 @media (max-width: 568px) {
   #hero {
